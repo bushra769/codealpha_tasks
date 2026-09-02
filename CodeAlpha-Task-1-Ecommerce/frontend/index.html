@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CodeAlpha E-Commerce Store</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+
+    <div class="logo">
+      🛍️ ShopEase
+    </div>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#products-section">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button id="cartBtn">
+      🛒 Cart (<span id="cartCount">0</span>)
+    </button>
+
+  </header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+
+    <h1>Welcome to ShopEase</h1>
+
+    <p>
+      Discover amazing products at the best prices.
+    </p>
+
+    <button class="shop-btn">
+      Shop Now
+    </button>
+
+  </section>
+
+
+  <!-- Products -->
+  <main id="products-section">
+
+    <h2>Our Products</h2>
+
+    <div id="products" class="products"></div>
+
+  </main>
+
+
+  <!-- Shopping Cart -->
+  <section id="cartSection" class="cart-section">
+
+    <div class="cart-header">
+
+      <h2>🛒 Shopping Cart</h2>
+
+      <button id="closeCart">
+        ✕ Close
+      </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+
+      <h3>
+        Total:
+        <span id="cartTotal">Rs. 0</span>
+      </h3>
+
+      <button id="checkoutBtn">
+        💳 Proceed to Checkout
+      </button>
+
+      <button id="clearCart">
+        🗑️ Clear Cart
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Checkout -->
+  <section id="checkoutSection" class="checkout-section">
+
+    <div class="checkout-container">
+
+      <div class="checkout-header">
+
+        <h2>💳 Checkout</h2>
+
+        <button id="closeCheckout">
+          ✕
+        </button>
+
+      </div>
+
+
+      <div class="checkout-content">
+
+        <!-- Customer Information -->
+
+        <div class="customer-form">
+
+          <h3>Customer Information</h3>
+
+          <form id="checkoutForm">
+
+            <label for="fullName">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Enter your full name"
+              required
+            >
+
+
+            <label for="email">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            >
+
+
+            <label for="phone">
+              Phone Number
+            </label>
+
+            <input
+              type="tel"
+              id="phone"
+              placeholder="03XX-XXXXXXX"
+              required
+            >
+
+
+            <label for="address">
+              Delivery Address
+            </label>
+
+            <textarea
+              id="address"
+              placeholder="Enter your complete address"
+              rows="4"
+              required
+            ></textarea>
+
+
+            <button type="submit" class="place-order-btn">
+              ✅ Place Order
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <!-- Order Summary -->
+
+        <div class="order-summary">
+
+          <h3>Order Summary</h3>
+
+          <div id="checkoutItems"></div>
+
+          <div class="summary-total">
+
+            <span>Total</span>
+
+            <strong id="checkoutTotal">
+              Rs. 0
+            </strong>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Order Success -->
+
+  <section id="successSection" class="success-section">
+
+    <div class="success-box">
+
+      <div class="success-icon">
+        ✓
+      </div>
+
+      <h2>Order Placed Successfully!</h2>
+
+      <p>
+        Thank you for shopping with ShopEase.
+      </p>
+
+      <p>
+        Your order has been received and will be processed soon.
+      </p>
+
+      <button id="continueShopping">
+        Continue Shopping
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="contact">
+
+    <p>
+      © 2026 ShopEase | CodeAlpha Internship Project
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
