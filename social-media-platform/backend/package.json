@@ -1,0 +1,14 @@
+{
+  "name": "social-media-platform",
+  "version": "1.0.0",
+  "description": "Social Media Platform Backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5",
+    "sqlite3": "^5.1.7"
+  }
+}

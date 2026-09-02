@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Social Media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>My Profile</h1>
+        <button id="followButton" onclick="followUser(2)">Follow</button>
+<p id="followMessage"></p>
+
+        <div class="profile-card">
+            <h2 id="profileName">Loading...</h2>
+            <p id="profileEmail"></p>
+            <p id="profileBio"></p>
+
+            <button id="logoutButton">Logout</button>
+        </div>
+
+        <hr>
+
+        <h2>My Posts</h2>
+
+        <div id="myPosts">
+            <p>No posts yet.</p>
+        </div>
+
+    </div>
+
+    <script src="profile.js"></script>
+
+</body>
+</html>
