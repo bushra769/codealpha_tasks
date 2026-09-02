@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ShopEase - Register</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="auth-container">
+
+    <div class="auth-card">
+
+      <div class="auth-logo">
+        🛍️ ShopEase
+      </div>
+
+      <h1>Create Account</h1>
+
+      <p class="auth-subtitle">
+        Join ShopEase and start shopping today.
+      </p>
+
+
+      <form id="registerForm">
+
+        <label for="name">
+          Full Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
+          required
+        >
+
+
+        <label for="email">
+          Email Address
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        >
+
+
+        <label for="password">
+          Password
+        </label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Create a password"
+          required
+        >
+
+
+        <button type="submit" class="auth-btn">
+          Create Account
+        </button>
+
+      </form>
+
+
+      <p id="registerMessage" class="auth-message"></p>
+
+
+      <p class="auth-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    const registerForm =
+      document.getElementById("registerForm");
+
+    const registerMessage =
+      document.getElementById("registerMessage");
+
+
+    registerForm.addEventListener("submit", async (event) => {
+
+      event.preventDefault();
+
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const email =
+        document.getElementById("email").value.trim();
+
+      const password =
+        document.getElementById("password").value;
+
+
+      try {
+
+        const response = await fetch(
+          "http://127.0.0.1:5000/api/register",
+          {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              name,
+              email,
+              password
+            })
+          }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!response.ok) {
+
+          registerMessage.textContent =
+            "❌ " + data.message;
+
+          registerMessage.className =
+            "auth-message error";
+
+          return;
+        }
+
+
+        registerMessage.textContent =
+          "✅ Registration successful!";
+
+        registerMessage.className =
+          "auth-message success";
+
+
+        registerForm.reset();
+
+
+        setTimeout(() => {
+
+          window.location.href = "login.html";
+
+        }, 1500);
+
+
+      } catch (error) {
+
+        console.error(error);
+
+        registerMessage.textContent =
+          "❌ Server connection failed.";
+
+        registerMessage.className =
+          "auth-message error";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
