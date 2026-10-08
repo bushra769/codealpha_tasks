@@ -7,3 +7,5 @@
 ![image alt](https://github.com/bushra769/codealpha_tasks/blob/91f4c4d78cc049ab150d11720529e50af13219b4/codealpha-task-1.5png.png)
 
 ![image alt](https://github.com/bushra769/codealpha_tasks/blob/bc68d7d1d03ae71ca9966a64c87eedd7be059e96/codealpha-task-2.png)
+
+![image alt](https://github.com/bushra769/codealpha_tasks/blob/3152fe661b76bd25ad382cb5c02abec8c9c3b5f2/codealpha-task-2.2png.png)
